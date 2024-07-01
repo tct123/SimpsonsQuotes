@@ -8,9 +8,6 @@ def firstget():
     return data
 
 
-# firstget = firstget()
-
-
 def main(page: ft.Page):
     def get():
         data = Wrapper()
