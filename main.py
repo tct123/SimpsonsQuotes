@@ -29,9 +29,10 @@ def main(page: ft.Page):
         icon=ft.icons.REFRESH, on_click=lambda e: get()
     )
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    quote = ft.Text("Please refresh")
-    character = ft.Text("Please refresh")
-    img = ft.Image(src="assets/icon.png")
+    data = firstget()
+    quote = ft.Text(data["quote"])
+    character = ft.Text(data["character"])
+    img = ft.Image(src=data["image"])
     page.add(
         ft.SafeArea(ft.Column(controls=[ft.Column(controls=[quote, character]), img]))
     )
