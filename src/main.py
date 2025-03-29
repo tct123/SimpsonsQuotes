@@ -24,7 +24,7 @@ def main(page: ft.Page):
     page.title = "Simpsons Quotes"
     page.appbar = ft.AppBar(title=ft.Text(page.title))
     page.floating_action_button = ft.FloatingActionButton(
-        icon=ft.icons.REFRESH, on_click=lambda e: get()
+        icon=ft.Icons.REFRESH, on_click=lambda e: get()
     )
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     data = firstget()
@@ -32,7 +32,12 @@ def main(page: ft.Page):
     character = ft.Text(data["character"])
     img = ft.Image(src=data["image"])
     page.add(
-        ft.SafeArea(ft.Column(controls=[ft.Column(controls=[quote, character]), img]))
+        ft.SafeArea(
+            ft.Column(
+                controls=[ft.Column(controls=[quote, character]), img],
+                horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+            )
+        )
     )
 
 
