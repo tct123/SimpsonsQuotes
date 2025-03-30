@@ -34,7 +34,13 @@ def main(page: ft.Page):
     page.add(
         ft.SafeArea(
             ft.Column(
-                controls=[ft.Column(controls=[quote, character]), img],
+                controls=[
+                    ft.Column(
+                        controls=[quote, character],
+                        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                    ),
+                    img,
+                ],
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             )
         )
