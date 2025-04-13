@@ -20,6 +20,7 @@ def main(page: ft.Page):
         img.update()
 
     # page.window.full_screen = True
+    page.adaptive = True
     page.scroll = True
     page.title = "Simpsons Quotes"
     page.appbar = ft.AppBar(title=ft.Text(page.title))
