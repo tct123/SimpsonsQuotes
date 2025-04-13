@@ -21,6 +21,7 @@ def main(page: ft.Page):
 
     # page.window.full_screen = True
     page.adaptive = True
+    page.padding = 0
     page.scroll = True
     page.title = "Simpsons Quotes"
     page.appbar = ft.AppBar(title=ft.Text(page.title))
